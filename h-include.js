@@ -171,6 +171,7 @@ window.HInclude.HIncludeElement = window.HIncludeElement = (function() {
     };
     try {
       req.open('GET', url, true);
+      req.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); // Add XMLHttpRequest header
       req.send('');
     } catch (e) {
       outstanding -= 1;
